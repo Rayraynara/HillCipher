@@ -21,6 +21,7 @@ class HC
         int[,] keyMatrix = new int[3, 3];
         getKeyMatrix(key, keyMatrix);
 
+        String CipherText = "";
         Console.Write("Ciphertext: " + CipherText + "\n");
     }
 
