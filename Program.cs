@@ -4,15 +4,22 @@ using System;
 class HC
 {
 
-    
-    static void getKeyMatrix(String key,  int[,] keyMatrix)
+    static void getKeyMatrix(String key, int[,] keyMatrix)
     {
-        
+        int k = 0;
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                keyMatrix[i, j] = (key[k]) % 65;
+                k++;
+            }
+        }
     }
 
-    static void encrypt()
+    static void encrypt(int[,] cipherMatrix, int[,] keyMatrix, int[,] messageVector)
     {
-        
+
     }
 
     static void HillCipher(String message, String key)
@@ -22,6 +29,7 @@ class HC
         getKeyMatrix(key, keyMatrix);
 
         String CipherText = "";
+
         Console.Write("Ciphertext: " + CipherText + "\n");
     }
 
@@ -33,4 +41,3 @@ class HC
         HillCipher(message, key);
     }
 }
-
