@@ -54,6 +54,9 @@ class HC
 
         String CipherText = "";
 
+        for (int i = 0; i < 3; i++)
+            CipherText += (char)(cipherMatrix[i, 0] + 65);
+
         Console.Write("Ciphertext: " + CipherText + "\n");
     }
 
